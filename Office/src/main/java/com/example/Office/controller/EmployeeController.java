@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Office.repository.EmployeeClass;
+import com.example.Office.dao.EmployeeClass;
+import com.example.Office.dao.Registration;
 import com.example.Office.service.EmployeeService;
+
 
 @RestController
 public class EmployeeController {
@@ -43,5 +45,17 @@ public class EmployeeController {
 	{
 		empService.deleteEmployeeClass(empId);
 	}
-
+	//Sorting Interface
+	@GetMapping(value="fetchRegistrationDetails")
+	public List<Registration> getRegistration()
+	{
+		List<Registration> regList=empService.getRegistration();
+		return regList;
+	}
+	
+	@GetMapping(value="/sortRegistration/{field}")
+	public List<Registration> sortRegistration(@PathVariable String field)
+	{
+		return empService.sortRegistration(field);
+	}
 }

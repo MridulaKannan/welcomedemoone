@@ -1,4 +1,4 @@
-package com.example.Office.repository;
+package com.example.Office.dao;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

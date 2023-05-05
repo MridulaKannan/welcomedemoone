@@ -14,7 +14,7 @@ public class WelcomeDemoOne {
 		@RequestMapping(value="/messages",method=RequestMethod.GET)
 		public String welcome()
 		{
-			return "Hiiii......This........is.......Hariniiiiiiiiiiiiiiiiii.....................From.............Thiruvarur";
+			return "Hiiii..";
 		}
 		
 	}

@@ -70,7 +70,6 @@ public class RegistrationService {
 		return result;
 	}
 	
-
 	//registration
 	public List<RegistrationDb> getRegistrationDb()
 	{
